@@ -1,0 +1,22 @@
+<div *ngIf="data" style="text-align:center">
+  <h1 >{{data.location.name}},{{data.location.country}}</h1>
+  <table >
+    <tr>
+        <td rowspan="3">
+            <img src={{data.current.condition.icon}}>
+          </td>
+      <td>{{data.location.localtime| date:'EEEE,LLLL dd'}}</td>
+      
+      <td>Precipitation:<b>{{data.current.precip_mm}} mm</b></td>
+    </tr>
+    <tr>
+      <td>{{data.current.condition.text}}</td>
+      <td>Humidity:<b>{{data.current.humidity}}%</b></td>
+    </tr>
+    <tr>
+        <td>Temperature: <b>{{data.current.feelslike_c}}&#8451;</b></td>
+        <td>Wind:<b>{{data.current.wind_kph}} kph</b></td>
+      </tr>
+    
+  </table>
+</div>

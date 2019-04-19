@@ -1,0 +1,17 @@
+<body>
+<div  style="text-align:center">
+  <h1 id="title">
+    Welcome to Weather Forecasting
+  </h1>
+  <app-search (dataEvent) = "pushData($event)"></app-search>
+  
+  <app-current-weather [data] = "weatherData"></app-current-weather>
+  <hr>
+  <app-weather [data] = "weatherData"></app-weather>
+  
+  
+</div>
+
+</body>
+
+

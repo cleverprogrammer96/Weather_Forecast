@@ -1,0 +1,33 @@
+<div *ngIf="data">
+ <table>
+  <tr *ngFor="let forecast of data.forecast.forecastday">
+      
+      
+        
+      
+        <td width="150" height="50" > 
+          {{forecast.date| date:'EEEE'}}
+        </td>
+      
+       
+      
+      <td width="150" height="50">
+        <img src={{forecast.day.condition.icon}}>
+        
+      </td>
+      <td width="150" height="50">
+        {{forecast.day.maxtemp_c}}&#8451;
+        <br>
+        {{forecast.day.mintemp_c}}&#8451;
+      </td>
+
+      <td width="150" height="50">
+        humidity:{{forecast.day.avghumidity}}%
+        
+      </td>
+      
+     
+  </tr>
+  
+ </table>
+</div>
